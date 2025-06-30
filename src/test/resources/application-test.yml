@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/cloud-db-test
+    username: test-user
+    password: test-pass
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: false

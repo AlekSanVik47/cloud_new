@@ -1,0 +1,38 @@
+{
+  "properties": [
+    {
+      "name": "spring.doc.api-docs.path",
+      "type": "java.lang.String",
+      "description": "Description for spring.doc.api-docs.path."
+    },
+    {
+      "name": "spring.doc.swagger-ui.path",
+      "type": "java.lang.String",
+      "description": "Description for spring.doc.swagger-ui.path."
+    },
+    {
+      "name": "spring.docker.compose.options",
+      "type": "java.lang.String",
+      "description": "Description for spring.docker.compose.options."
+    },
+    {
+      "name": "server.springdoc.api-docs.path",
+      "type": "java.lang.String",
+      "description": "Description for server.springdoc.api-docs.path."
+    },
+    {
+      "name": "server.liquidbase.change-log",
+      "type": "java.lang.String",
+      "description": "Description for server.springdoc.swagger-ui.path."
+    },
+    {
+      "name": "spring.liquibase.change-log.classpath",
+      "type": "java.lang.String",
+      "description": "Description for spring.liquibase.change-log.classpath."
+    },
+    {
+      "name": "spring.liquibase.change-log.file-extension",
+      "type": "java.lang.String",
+      "description": "Description for spring.liquibase.change-log.file-extension."
+    }
+  ] }

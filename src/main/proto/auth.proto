@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package auth;
+
+// Сообщение для запроса регистрации
+message SignUpRequest {
+    string username = 1; // Имя пользователя
+    string password = 2; // Пароль
+}
+
+// Сообщение для ответа на регистрацию
+message SignUpResponse {
+    string username = 1; // Имя пользователя
+}
+
+// Сообщение для запроса авторизации
+message SignInRequest {
+    string username = 1; // Имя пользователя
+    string password = 2; // Пароль
+}
+
+// Сообщение для ответа на авторизацию
+message SignInResponse {
+    string username = 1; // Имя пользователя
+}
+
+// Сообщение для выхода из аккаунта
+message SignOutRequest {}
+
+// Сообщение для ответа на выход из аккаунта
+message SignOutResponse {}
+
+// Сообщение для получения текущего пользователя
+message CurrentUserResponse {
+    string username = 1; // Имя пользователя
+}
+
+// Определение сервиса аутентификации
+service AuthService {
+    rpc SignUp(SignUpRequest) returns (SignUpResponse);
+    rpc SignIn(SignInRequest) returns (SignInResponse);
+    rpc SignOut(SignOutRequest) returns (SignOutResponse);
+    rpc GetCurrentUser(google.protobuf.Empty) returns (CurrentUserResponse);
+}

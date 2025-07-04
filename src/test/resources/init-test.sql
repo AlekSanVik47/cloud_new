@@ -17,13 +17,13 @@ DO $$
 -- Установка прав для роли
 GRANT ALL PRIVILEGES ON DATABASE "cloud-db-test" TO "test-user";
 
--- Создание схемы
-DO $$
-    BEGIN
-        IF NOT EXISTS (SELECT 1 FROM information_schema.schemata WHERE schema_name = 'cloud_test_schema') THEN
-            CREATE SCHEMA cloud_test_schema;
-        END IF;
-    END $$;
-
--- Предоставление прав на схему
-GRANT ALL PRIVILEGES ON SCHEMA cloud_test_schema TO "test-user";
+-- -- Создание схемы
+-- DO $$
+--     BEGIN
+--         IF NOT EXISTS (SELECT 1 FROM information_schema.schemata WHERE schema_name = 'cloud_test_schema') THEN
+--             CREATE SCHEMA cloud_test_schema;
+--         END IF;
+--     END $$;
+--
+-- -- Предоставление прав на схему
+-- GRANT ALL PRIVILEGES ON SCHEMA cloud_test_schema TO "test-user";

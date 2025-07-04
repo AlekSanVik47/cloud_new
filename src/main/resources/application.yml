@@ -36,7 +36,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
-    show-sql: true
+      show-sql: true
+      open-in-view: false
+      auto-commit: false
+      properties:
+        hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+        query:
+          fail-on-pagination-over-collection-fetch: false // контролирует поведение при использовании пагинации с коллекциями
+          in-clause-parameter-padding: true // оптимизирует запросы
   liquibase:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.xml
@@ -58,16 +65,19 @@ server:
 
 logging:
   level:
-    org:
-      springdoc: DEBUG
-      springframework: INFO
-      security: DEBUG
-      org.springframework.security: DEBUG
-    ru:
-      cloudstorage: DEBUG
+#    ru.storagecloud.cloud.services.userservice.UserServiceImpl: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.engine.transaction: DEBUG
+#    org:
+#      springdoc: INFO
+#      springframework: INFO
+#      org.springframework.security: INFO
+#      hibernate: DEBUG
+#    ru:
+#      cloudstorage: INFO
 
-      liquibase: DEBUG
-      org.springframework.boot.autoconfigure.liquibase: DEBUG
+#      liquibase: DEBUG
+#      org.springframework.boot.autoconfigure.liquibase: DEBUG
 
 
 

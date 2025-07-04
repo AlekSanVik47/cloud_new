@@ -34,5 +34,55 @@
       "name": "spring.liquibase.change-log.file-extension",
       "type": "java.lang.String",
       "description": "Description for spring.liquibase.change-log.file-extension."
+    },
+    {
+      "name": "spring.jpa.auto-commit",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.auto-commit."
+    },
+    {
+      "name": "spring.docker.compose.lifecycle-management",
+      "type": "java.lang.String",
+      "description": "Description for spring.docker.compose.lifecycle-management."
+    },
+    {
+      "name": "spring.docker.compose.file",
+      "type": "java.lang.String",
+      "description": "Description for spring.docker.compose.file."
+    },
+    {
+      "name": "spring.docker.compose.profiles.active",
+      "type": "java.lang.String",
+      "description": "Description for spring.docker.compose.profiles.active."
+    },
+    {
+      "name": "spring.jpa.hibernate.show-sql",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.show-sql."
+    },
+    {
+      "name": "spring.jpa.hibernate.open-in-view",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.open-in-view."
+    },
+    {
+      "name": "spring.jpa.hibernate.auto-commit",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.auto-commit."
+    },
+    {
+      "name": "spring.jpa.hibernate.properties.hibernate.dialect",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.properties.hibernate.dialect."
+    },
+    {
+      "name": "spring.jpa.hibernate.properties.query.fail-on-pagination-over-collection-fetch",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.properties.query.fail-on-pagination-over-collection-fetch."
+    },
+    {
+      "name": "spring.jpa.hibernate.properties.query.in-clause-parameter-padding",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.properties.query.in-clause-parameter-padding."
     }
   ] }

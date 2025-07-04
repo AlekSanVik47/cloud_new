@@ -7,10 +7,13 @@ services:
       POSTGRES_DB: cloud-db
       POSTGRES_USER: cloud-storage
       POSTGRES_PASSWORD: cloud-storage
+
+    volumes:
+      - ./src/main/resources/init.sql:/docker-entrypoint-initdb.d/init.sql    # Монтируем init.sql в контейнер
+      - postgres_data:/var/lib/postgresql/data
     ports:
       - "5433:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
@@ -49,7 +52,7 @@ services:
       SPRING_REDIS_HOST: redis
       SPRING_REDIS_PORT: 6379
     ports:
-      - "8087:8087"
+      - "8088:8087"
     networks:
       - backend
     restart: unless-stopped
